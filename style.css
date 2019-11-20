@@ -1,0 +1,244 @@
+* {
+    font-family: Montserrat;
+    font-style: normal;
+    /* padding: 0;
+    margin: 0; */
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 50px 80px 50px 80px;
+    height: 30px;
+}
+
+header img {
+    width: 75px;
+    height: 25px;
+}
+
+main {
+    margin: 130px 250px 0px 250px;
+}
+
+h1, h2, h3, a {
+    color: #EC3332;
+    letter-spacing: 0.02em;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 58px;
+    line-height: 130%;
+    /* or 75px */
+    text-transform: uppercase;
+
+    margin-bottom: 40px;
+}
+
+p {
+    font-weight: normal;
+    line-height: 130%;
+    /* or 26px */
+    color: #000000;
+
+    margin-bottom: 10px;
+}
+
+ol {
+    list-style: none;
+    counter-reset: count;
+}
+
+ol li {
+    counter-increment: count;
+    position: relative;
+}
+
+ol li::before {
+    content: counter(count) ' ';
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 130%;
+    /* identical to box height, or 47px */
+
+    letter-spacing: 0.02em;
+    color: #EC3332;
+
+    display: absolute;
+    top: 0;
+    left: 0;
+    min-width: 40px;
+    display: inline-block; 
+    vertical-align: middle;
+}
+
+ol li::after {
+    display: inline-block;
+    position: absolute;
+    vertical-align: middle;
+    content: counter(count) ' ';
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 130%;
+
+    top: 2px;
+    left: 2px;
+    
+    color: transparent;
+   -webkit-text-stroke: 1px #EC3332; 
+   z-index: -1;
+}
+
+p, li {
+    font-size: 20px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 130%;
+    /* identical to box height, or 47px */
+
+}
+
+p + .photo {
+    margin-top: 140px;
+}
+
+.photo {
+    margin-bottom: 160px;
+}
+
+.location {
+    margin-bottom: 60px;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 130%;
+    /* identical to box height, or 26px */
+}
+
+p + ol {
+    margin-top: 39px;
+}
+
+ol + p {
+    margin-top: 44px;
+}
+
+li {
+    margin-top: 28px;
+}
+
+ul > li + li {
+    margin-top: 15px;
+}
+
+p + ul {
+    margin-top: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p + h2 {
+    margin-top: 80px;
+}
+
+p + h3 {
+    margin-top: 80px;
+}
+
+blockquote {
+    position: relative;
+    border: solid;
+    border-width: 2px 0;
+    
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 100%;
+    /* identical to box height, or 42px */
+
+    letter-spacing: 0.02em;
+
+    color: #000000;
+
+    margin: 140px 0;
+    padding: 65px 0;
+}
+
+img {
+    width: 734px;
+    height: 290px;
+}
+
+ul + .location {
+    margin-top: 140px;
+}
+
+.address {
+    font-style: italic;
+    margin-top: 30px;
+    margin-bottom: 140px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    /* font-size: 16px; */
+}
+
+ul li::before {
+    content: '';
+    display: inline-block;
+    height: 9px;
+    width: 9px;
+    background-color: red;
+    border-radius: 100%;
+    margin-right: 30px;
+    vertical-align: middle; 
+}
+
+li span {
+    color: black;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 40px 80px 80px 80px;
+    padding-top: 40px;
+    border: solid;
+    border-width: 2px 0 0 0;
+}
+
+.links a {
+    margin-left: 45px;
+    color: black;
+    font-size: 18px;
+    line-height: 120%;
+    /* identical to box height, or 22px */
+
+    letter-spacing: 0.02em;
+    font-weight: bold;
+}
+
+footer .feedback a {
+    margin-right: 45px;
+}
