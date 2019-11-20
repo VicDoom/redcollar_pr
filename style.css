@@ -13,6 +13,7 @@ header {
     height: 30px;
 }
 
+
 header img {
     width: 75px;
     height: 25px;
@@ -20,6 +21,29 @@ header img {
 
 main {
     margin: 130px 250px 0px 250px;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    height: 52px;
+    width: 69px;
+    top: 10px;
+    left: -170px;
+}
+
+.leftArrow, .rightArrow {
+    position: absolute;
+    height: 52px;
+    width: 30px;
+}
+
+.leftArrow {
+    left: -13em;
+}
+
+.rightArrow {
+    left: -9em;
 }
 
 h1, h2, h3, a {
@@ -112,7 +136,7 @@ p + .photo {
 }
 
 .photo {
-    margin-bottom: 160px;
+    margin-bottom: 60px;
 }
 
 .location {
@@ -135,7 +159,7 @@ ol + p {
 }
 
 li {
-    margin-top: 28px;
+    margin-top: 7px;
 }
 
 ul > li + li {
@@ -159,10 +183,18 @@ p + h3 {
 }
 
 blockquote {
-    position: relative;
+
     border: solid;
     border-width: 2px 0;
-    
+
+    margin: 140px 0;
+    padding: 65px 0;
+}
+
+blockquote span {
+
+    position: relative;
+    display: inline-block;
     font-family: Montserrat;
     font-style: italic;
     font-weight: normal;
@@ -173,9 +205,32 @@ blockquote {
     letter-spacing: 0.02em;
 
     color: #000000;
+    margin-left: 100px;
+}
 
-    margin: 140px 0;
-    padding: 65px 0;
+blockquote span::before, blockquote span::after {
+    content: "\201d";
+    display: inline-block;
+    font-size: 3em;
+    vertical-align: middle;
+    height: 20px;
+
+    position: absolute;
+}
+
+blockquote span::before {
+    color: red;
+    left: -80px;
+    top: 20px;
+}
+
+blockquote span::after {
+    left: -78px;
+    top: 22px;
+
+    color: transparent;
+    -webkit-text-stroke: 1px #EC3332; 
+    z-index: -1;
 }
 
 img {
