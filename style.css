@@ -14,9 +14,13 @@ header {
 }
 
 
-header img {
+header .logo {
     width: 75px;
     height: 25px;
+}
+
+header .but {
+    display: none;
 }
 
 main {
@@ -296,4 +300,34 @@ footer {
 
 footer .feedback a {
     margin-right: 45px;
+}
+
+@media (max-width: 767px) {
+
+    header {
+        max-width: 100%;
+        margin: 3em 2em 3em 2em;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header .but {
+        display: block;
+        height: 26px;
+        width: 24px;
+    }
+
+    header .logo {
+        width: 60px;
+        height: 20px;
+    }
+
+    main {
+        max-width: 100%;
+        margin: 25px 20px 40px 20px;
+    }
+
+
 }
