@@ -275,96 +275,11 @@ li span {
     vertical-align: middle;
 }
 
-select {
-    width: 740px;
-    height: 70px;
-    font-size: 20px;
-    padding: 20px;
-}
-
-.ulabel {
-    position: relative;
-}
-
-.ulabel::after {
-    content: '';
-}
-
-.ulabel::after {
-    font-size: 30px;
-    position: absolute;
-    content: '\02C5';
-    font-weight: bold;
-    right: 5px;
-    /* display: inline-block; */
-    top: -50%;
-}
-
-.ulabel::after:focus {
-    content: '\02C4';
-}
-
-/* как это пофиксить? */
-
-input, textarea {
-    margin-top: 40px;
-    font-size: 20px;
-    padding-left: 20px;
-    width: 720px;
-    height: 70px;
-    display: block;
-    border-radius: 0;
-}
-
-textarea {
-    padding-top: 20px;
-    margin-bottom: 60px;
-}
-
-input[type='checkbox'] {
-    display: none;
-}
-
-.check {
-    color: #000;
-    cursor: default;
-    font-weight: normal;
-    line-height: 30px;
-    padding: 10px 0;
-    vertical-align: middle;
-}
-
-.check:before {
-    display: inline-block;
-    color: red;
-    content: ' ';
-    width: 30px;
-    height: 30px;
-    background: rgb(255, 255, 255);
-    border: 1px solid #e3e3e3;
-    margin-right: 15px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-input[type='checkbox']:checked + label:before {
-    content: "\2714";
-}
-
-input[type = 'submit'] {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 0.12em;
-    background: #EC3332;
-    box-shadow: 5px 5px black;
-}
-
 footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 40px 80px 80px 80px;
+    margin: 40px 2% 80px 2%;
     padding-top: 40px;
     border: solid;
     border-width: 2px 0 0 0;
@@ -383,6 +298,27 @@ footer {
 
 footer .feedback a {
     margin-right: 45px;
+}
+
+.catalog {
+    display: grid;
+    gap: 60px 3%;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    margin-left: 250px;
+    margin-bottom: 100px;
+    margin-right: 2%;
+}
+
+.list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2%;
+}
+
+.list img, .list span {
+    margin-left: 50px;
 }
 
 @media (max-width: 767px) {
@@ -438,6 +374,19 @@ footer .feedback a {
         position: static;
         height: 24px;
         width: 32px;
+    }
+
+    .catalog {
+        max-width: 100%;
+        grid-row-gap: 35px;
+        grid-template-columns: auto; 
+        margin: 25px 20px 40px 20px; 
+        justify-items: center;
+    }
+
+    .list {
+        max-width: 100%;
+        justify-content: center;
     }
 
     h1 {
@@ -514,10 +463,6 @@ footer .feedback a {
         margin: 30px 0;
     }
 
-    select, input, textarea {
-        max-width: 100%;
-    }
-
     footer {
         max-width: 100%;
         margin: 60px 20px 40px 20px;
@@ -551,3 +496,5 @@ footer .feedback a {
         font-size: 14px;
     }
 }
+
+
